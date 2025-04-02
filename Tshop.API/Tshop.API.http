@@ -1,0 +1,6 @@
+@Tshop.API_HostAddress = http://localhost:5234
+
+GET {{Tshop.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
