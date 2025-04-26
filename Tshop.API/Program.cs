@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 using Tshop.API.Data;
+using Tshop.API.Services;
 
 
 namespace Tshop.API
@@ -25,6 +26,7 @@ namespace Tshop.API
             
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
              options.UseSqlServer(builder.Configuration.GetConnectionString("defaultConnection")));
+           builder.Services.AddScoped<ICategoryService,CategoryService>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
